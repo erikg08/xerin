@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>"Somos  Coisa de Alma"</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Para o amor da minha vida/meu xerinho</h1>
+
+    <p class="mensagem">
+      Desde que você entrou na minha vida, tudo ficou mais leve e colorido.
+      Esse site é simples mas foi feito com varios detalhes pensando muito em você
+    </p>
+
+    <!-- LINK DA MÚSICA -->
+    <a class="musica" href="https://open.spotify.com/track/7z5m1d4eBZrMxtVjZfr0D0?si=wPSFVskcRQCKSrdwlfTH5g" target="_blank">
+      🎵 Acho  que a gente se conhece um pocuco mais de um mês
+    </a>
+
+    <h2>Nossos Momentos</h2>
+
+    <div class="galeria">
+
+      <div class="foto" onclick="mostrarTexto(1)">
+        <img src="image1.jpeg">
+        <p id="texto1" class="texto-foto">Nossa primeira foto  juntos, num dia que não tinha "nada" de especial, mas tinha  nós ❤️</p>
+      </div>
+
+      <div class="foto" onclick="mostrarTexto(2)">
+        <img src="image2.jpeg">
+        <p id="texto2" class="texto-foto">O primeiro  presente que  mesmo  com pouco mais de um mês conversando  enfrentei a mim mesmo e decidi comprar, e claro não podia faltar nosso primeiro filho 💕</p>
+      </div>
+
+      <div class="foto" onclick="mostrarTexto(3)">
+        <img src="image5.jpeg">
+        <p id="texto3" class="texto-foto">Nós dois fazendo  o  que mais gostamos, brincando de casinha e COMENDO BESTEIRA, sei que você ama esses  pequenos  momentos  e  gosto da sua risada quando  ve que estou apanhando pra preparar alguma coisa😍</p>
+      </div>
+
+      <div class="foto" onclick="mostrarTexto(4)">
+        <img src="image3.jpeg">
+        <p id="texto4" class="texto-foto">Finalmente, depois de tanto tempo sendo adiado pelo rh a coragem veio, mesmo com medo, com ansiedade mas com aquilo que sempre tivemos  amor acima de tudo(e um pouco de fogo no cu né) 💖</p>
+      </div>
+
+      <div class="foto" onclick="mostrarTexto(5)">
+        <img src="image4.jpeg">
+        <p id="texto5" class="texto-foto">Nosso primeiro Ano Novo Juntos, mesmo com seus  detalhes peculiares e muitas caras de cu por sinal, aproveitamos nosso momentinho  juntos 💘</p>
+      </div>
+
+    </div>
+
+    <button onclick="mostrarMensagem()"> Uma simples surpresinha 💌</button>
+
+    <p id="surpresa" class="escondido">
+      Eu te amo muito meu amor, sei que vamos conseguir passar por tudo isso juntos, sei que temos força, sei que posso tudo que for preciso se tiver você ao meu lado. ❤️
+    </p>
+  </div>
+<script>
+  function mostrarMensagem() {
+    let mensagem = document.getElementById("surpresa");
+
+    if (mensagem.style.display === "block") {
+      mensagem.style.display = "none";
+    } else {
+      mensagem.style.display = "block";
+    }
+  }
+
+  function mostrarTexto(numero) {
+    let textos = document.querySelectorAll(".texto-foto");
+
+    textos.forEach(function(t) {
+      t.style.display = "none";
+    });
+
+    let textoSelecionado = document.getElementById("texto" + numero);
+    textoSelecionado.style.display = "block";
+  }
+</script>
+  
+
+</body>
+</html>
